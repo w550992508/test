@@ -15,7 +15,6 @@
         }
 
         table {
-            
             width: 95%;
             margin: auto;
             text-align: center
@@ -96,19 +95,20 @@
                 <input type="text" value="" id="shuida1">
             </td>
             <td>
-                <input type="text" value="2.5" id="shuijia1">
+                <input type="text" value="2.5" id="shuijia1" style="border: red solid 0.15rem;">
             </td>
             <td>
                 <input type="text" value="" id="dian1">
             </td>
             <td>
-                <input type="text" value="0.57" id="dianjia1">
+                <input type="text" value="0.57" id="dianjia1" style="border: red solid 0.15rem;">
             </td>
         </tr>
         </tr>
     </table>
     <div style="text-align: center;padding: 5%">
-        <button onclick="testValue()">测试</button>
+        <button onclick="testValue()">计算</button>
+        <button onclick="resetValue()">重置</button>
     </div>
     <div class="show">
         用水：<span id="htmlyongshui"></span>
@@ -170,6 +170,23 @@
         let myDate = new Date();
         let timespan = myDate.toLocaleDateString()
         document.getElementById("timespan").innerHTML = timespan
+    }
+
+    function resetValue() {
+        document.getElementById("shuizong").value = ''
+        document.getElementById("shuida").value = ''
+        document.getElementById("dian").value = ''
+        document.getElementById("shuizong1").value = ''
+        document.getElementById("shuida1").value = ''
+        document.getElementById("dian1").value = ''
+        document.getElementById("htmlyongshui").innerHTML = ''
+        document.getElementById("htmlshuifei").innerHTML = ''
+        document.getElementById("htmlyongdian").innerHTML = ''
+        document.getElementById("htmldainfei").innerHTML = ''
+        document.getElementById("htmlheji").innerHTML = ''
+        document.getElementById("timespan").innerHTML = ''
+
+
     }
 
 </script>
